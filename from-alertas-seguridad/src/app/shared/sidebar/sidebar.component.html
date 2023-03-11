@@ -1,0 +1,87 @@
+<nav class="sidebar close">
+  <header>
+    <div class="image-text">
+      <span class="image">
+        <img [src]="usuario.imagenUrl" alt="" />
+      </span>
+
+      <div class="text logo-text">
+        <span class="name"> {{ usuario.nombre | slice : 0 : 13 }}</span>
+        <span class="profession">{{ usuario.email | slice : 0 : 13 }}...</span>
+      </div>
+    </div>
+
+    <i class="bx bx-chevron-right toggle"></i>
+  </header>
+
+  <div class="menu-bar">
+    <div class="menu">
+      <li class="search-box">
+        <i class="bx bx-search _icon"></i>
+        <input type="text" placeholder="Search..." />
+      </li>
+      <div>
+        <ul class="d-flex flex-column m-0 p-0">
+          <li class="nav-link">
+            <a routerLink="dashboard">
+              <i class="bi bi-house-door-fill _icon"></i>
+              <span class="text nav-text">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a routerLink="alertas">
+              <i class="bi bi-bell-fill _icon"></i>
+              <span class="text nav-text">Alertas</span>
+            </a>
+          </li>
+
+          <!-- sensor -->
+          <li class="nav-link">
+            <a routerLink="sensor">
+              <i class="bi bi-broadcast-pin _icon"></i>
+              <span class="text nav-text">Sensores</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a routerLink="zona-seguridad">
+              <i class="bi bi-shield-lock-fill _icon"></i>
+              <span class="text nav-text">Zona Seguridad</span>
+            </a>
+          </li>
+          <!-- perfil -->
+          <li class="nav-link">
+            <a routerLink="perfil">
+              <i class="bi bi-person-circle _icon"></i>
+              <span class="text nav-text">Perfil</span>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottom-content">
+      <li class="cursor-p">
+        <a (click)="logout()">
+          <i class="bx bx-log-out _icon"></i>
+          <span class="text nav-text">Logout</span>
+        </a>
+      </li>
+
+      <li class="mode">
+        <div class="sun-moon">
+          <i class="bx bx-moon _icon moon"></i>
+          <i class="bx bx-sun _icon sun"></i>
+        </div>
+        <span class="mode-text text">Dark mode</span>
+
+        <div class="toggle-switch">
+          <span class="switch"></span>
+        </div>
+      </li>
+    </div>
+  </div>
+</nav>
